@@ -1023,7 +1023,7 @@ static void Matrix3x4_Invert_Simple (const float *in1, float *out)
 	out[11] = -(in1[3] * out[8] + in1[7] * out[9] + in1[11] * out[10]);
 }
 
-void Mod_LoadIQMModel (qmodel_t *mod, const void *buffer)
+void Mod_LoadIQMModel (qmodel_t *mod, const char *buffer)
 {
 	const struct iqmheader	*pinheader;
 	const char				*pintext;
