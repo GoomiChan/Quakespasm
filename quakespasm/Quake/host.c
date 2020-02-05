@@ -314,6 +314,8 @@ void Host_InitLocal (void)
 
 	Cvar_RegisterVariable (&temp1);
 
+	Dev_Init_f();
+
 	Host_FindMaxClients ();
 }
 
@@ -865,6 +867,8 @@ void _Host_Frame (double time)
 		S_Update (vec3_origin, vec3_origin, vec3_origin, vec3_origin);
 
 	CDAudio_Update();
+
+	Dev_Update();
 
 	if (host_speeds.value)
 	{

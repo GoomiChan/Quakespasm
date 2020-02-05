@@ -63,7 +63,7 @@ static int findhandle (void)
 			return i;
 	}
 	n = sys_handles_max+10;
-	sys_handles = realloc(sys_handles, sizeof(*sys_handles)*n);
+	sys_handles = (FILE**)realloc(sys_handles, sizeof(*sys_handles)*n);
 	if (!sys_handles)
 		Sys_Error ("out of handles");
 	while (sys_handles_max < n)
